@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\material">
+      <UniqueIdentifier>{b5162cee-839d-4528-8a9a-397f60723724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\material">
+      <UniqueIdentifier>{167001a2-f728-4834-b7ca-38fb87ce7070}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,6 +27,42 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="begTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dielectric.h">
+      <Filter>头文件\material</Filter>
+    </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>头文件\material</Filter>
+    </ClInclude>
+    <ClInclude Include="metal.h">
+      <Filter>头文件\material</Filter>
+    </ClInclude>
+    <ClInclude Include="lambertian.h">
+      <Filter>头文件\material</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -28,6 +70,42 @@
     </ClCompile>
     <ClCompile Include="MyLightTrace.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="begTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vec3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hitable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hitable_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="camare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dielectric.cpp">
+      <Filter>源文件\material</Filter>
+    </ClCompile>
+    <ClCompile Include="lambertian.cpp">
+      <Filter>源文件\material</Filter>
+    </ClCompile>
+    <ClCompile Include="material.cpp">
+      <Filter>源文件\material</Filter>
+    </ClCompile>
+    <ClCompile Include="metal.cpp">
+      <Filter>源文件\material</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

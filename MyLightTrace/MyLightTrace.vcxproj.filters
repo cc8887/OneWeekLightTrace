@@ -19,6 +19,18 @@
     <Filter Include="源文件\material">
       <UniqueIdentifier>{167001a2-f728-4834-b7ca-38fb87ce7070}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\shape">
+      <UniqueIdentifier>{345e87a6-2c36-4f8d-bf73-d0af6d06ba33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\shape">
+      <UniqueIdentifier>{14175141-7ecd-4bce-89ca-171b5f78097e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\math">
+      <UniqueIdentifier>{c44defed-8f8f-4591-9903-8b0f6d9c0c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\math">
+      <UniqueIdentifier>{e4c32136-8121-4edf-be40-14665bfa2281}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -30,25 +42,10 @@
     <ClInclude Include="begTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="vec3.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ray.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="hitable.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="sphere.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="hitable_list.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="camare.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="random.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="dielectric.h">
@@ -63,6 +60,21 @@
     <ClInclude Include="lambertian.h">
       <Filter>头文件\material</Filter>
     </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>头文件\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable.h">
+      <Filter>头文件\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable_list.h">
+      <Filter>头文件\shape</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -74,25 +86,10 @@
     <ClCompile Include="begTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vec3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="hitable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sphere.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="hitable_list.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="camare.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="random.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dielectric.cpp">
@@ -106,6 +103,21 @@
     </ClCompile>
     <ClCompile Include="metal.cpp">
       <Filter>源文件\material</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>源文件\shape</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>源文件\math</Filter>
+    </ClCompile>
+    <ClCompile Include="vec3.cpp">
+      <Filter>源文件\math</Filter>
+    </ClCompile>
+    <ClCompile Include="hitable.cpp">
+      <Filter>源文件\shape</Filter>
+    </ClCompile>
+    <ClCompile Include="hitable_list.cpp">
+      <Filter>源文件\shape</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,7 +13,7 @@ public:
 		random tampR;
 		//vec3 target = rec.normal + tampR.sphere();
 		vec3 target = reflect(unit_vector(in.direction()), rec.normal);
-		scattered = ray(rec.p, target+fuzz*tampR.sphere());
+		scattered = ray(rec.p, target+fuzz*tampR.sphere(),in.time());
 		att = albedo;
 		return (dot(scattered.direction(),rec.normal))>0;
 	}

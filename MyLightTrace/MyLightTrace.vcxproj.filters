@@ -75,6 +75,9 @@
     <ClInclude Include="hitable_list.h">
       <Filter>头文件\shape</Filter>
     </ClInclude>
+    <ClInclude Include="moving_sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -118,6 +121,9 @@
     </ClCompile>
     <ClCompile Include="hitable_list.cpp">
       <Filter>源文件\shape</Filter>
+    </ClCompile>
+    <ClCompile Include="moving_sphere.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

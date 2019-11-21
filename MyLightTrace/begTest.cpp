@@ -209,6 +209,10 @@ void build_2_5(stds string name) {
 }
 
 
+void build_2_6(stds string name) {
+
+}
+
 vec3 color(const ray&r) {
 	//if (hit_sphere(vec3(0, 0, -2), 0.5, r))
 	//{
@@ -235,7 +239,7 @@ vec3 color(const ray&r, hitable *world) {
 		//rec.normal.make_unit_vector();
 		//return 0.5*vec3(rec.normal.x() + 1, rec.normal.y() + 1, rec.normal.z() + 1);
 		vec3 target = rec.normal + tampR.sphere();
-		return 0.5*color(ray(rec.p, target), world);
+		return 0.5*color(ray(rec.p, target,r.time()), world);
 	}
 	else
 	{

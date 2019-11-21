@@ -69,5 +69,6 @@ camare::~camare()
 ray camare::get_ray(float s, float t) {
 	vec3 rd = lens_radius* camareR.sphere();
 	vec3 offset = rd.x()*u + rd.y()*v;
-	return ray(origin+offset, corner + s * hor + t * ver - origin-offset); 
+	float time = time0 + camareR.drand()*(time1 - time0);
+	return ray(origin+offset, corner + s * hor + t * ver - origin-offset,time); 
 }	

@@ -19,6 +19,7 @@ public:
 	random	camareR;
 	vec3 u, v, w;
 	float lens_radius;
+	float time0, time1;
 
 };
 #endif

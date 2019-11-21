@@ -154,6 +154,7 @@
     <ClInclude Include="lambertian.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="metal.h" />
+    <ClInclude Include="moving_sphere.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="ray.h" />
     <ClInclude Include="sphere.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="lambertian.cpp" />
     <ClCompile Include="material.cpp" />
     <ClCompile Include="metal.cpp" />
+    <ClCompile Include="moving_sphere.cpp" />
     <ClCompile Include="MyLightTrace.cpp" />
     <ClCompile Include="random.cpp" />
     <ClCompile Include="ray.cpp" />

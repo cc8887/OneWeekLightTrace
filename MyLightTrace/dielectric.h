@@ -39,10 +39,10 @@ public:
 		}
 		random tampR;
 		if (tampR.drand() < reflect_prob) {
-			scattered = ray(rec.p, reflected);
+			scattered = ray(rec.p, reflected,in.time());
 		}
 		else {
-			scattered = ray(rec.p, refracted);
+			scattered = ray(rec.p, refracted,in.time());
 		}
 		return true;
 		

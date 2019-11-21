@@ -8,6 +8,7 @@
 //void build_2_3(std::string name);
 //void build_2_4(std:: string name);
 void build_2_5(std::string name);
+void build_2_6(std::string name);
 vec3 color(const ray&r);
 vec3 color(const ray&r, hitable *world);
 vec3 color(const ray&r, hitable *world, int depth);

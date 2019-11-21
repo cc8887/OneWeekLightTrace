@@ -3,7 +3,7 @@
 
 
 #define stds std::
-#define ELENUM 4
+#define ELENUM 5
 //void build_1_1()
 //{
 //	const stds string s1[3] = { "255 0 0","0 255 0","0 0 255" };
@@ -210,7 +210,52 @@ void build_2_5(stds string name) {
 
 
 void build_2_6(stds string name) {
+	int nx = 200;
+	int ny = 100;
+	int ns = 100;
+	stds ofstream file(name);
+	file << "P3\n" << nx << " " << ny << "\n 255 \n";
+	random rand;
+	//camare cam(135,float(nx)/float(ny));
+	//光圈越小，越接近小孔成像，景深越大，像越清晰
+	float apeture = 0;
+	vec3 lookfrom(3, 3, 4);
+	vec3 lookto(0, 0, -1);
+	float dis = (lookfrom - lookto).length();
+	camare cam(lookfrom, lookto, vec3(0, 1, 0), 40, float(nx) / float(ny), apeture, dis,0,10);
 
+	hitable *list[ELENUM];
+	list[0] = new sphere(vec3(0, 0, -1), 0.5, new lambertian(vec3(0.8, 0.3, 0.3)));
+	list[1] = new sphere(vec3(0, -100.5, -1), 100, new lambertian(vec3(0.8, 0.8, 0.0)));
+	list[2] = new sphere(vec3(1, 0, -1), 0.5, new metal(vec3(0.3, 0.1, 0.3)));
+	list[3] = new sphere(vec3(-1, 0, -1), 0.5, new dielectric(0.1));
+	list[4] = new moving_sphere(vec3(-2, 0, 0), vec3(1, 0, 0), 0, 10, 0.8, new dielectric(0.1));
+	hitable_list *world = new hitable_list(list, ELENUM);
+	for (int i = ny - 1; i >= 0; i--)
+	{
+		system("cls");
+		stds cout << "渲染进度\t" << float(ny - 1 - i) / float(ny) * 100 << "\t%" << stds endl;
+		for (int j = 0; j < nx; j++)
+		{
+			vec3 ele(0, 0, 0);
+			for (int k = 0; k < ns; k++)
+			{
+				float v = float(i + rand.drand()) / float(ny);
+				float u = float(j + rand.drand()) / float(nx);
+				ele += color(cam.get_ray(u, v), world, 0);
+			}
+			ele /= float(ns);
+			ele = vec3(sqrt(ele.x()), sqrt(ele.y()), sqrt(ele.z()));
+			int ir = int(255.99*ele[0]);
+			int ig = int(255.99*ele[1]);
+			int ib = int(255.99*ele[2]);
+
+
+			file << ir << " " << ig << " " << ib << "\n";
+		}
+	}
+	file.close();
+	stds cout << "渲染完成" << stds endl;
 }
 
 vec3 color(const ray&r) {

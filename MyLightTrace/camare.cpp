@@ -62,6 +62,27 @@ camare::camare(vec3 lookfrom, vec3 lookat, vec3 vup, float vfov, float aspect,fl
 
 }
 
+camare::camare(vec3 lookfrom, vec3 lookat, vec3 vup, float vfov, float aspect, float aperture, float focus_dist,float t0, float t1)
+{
+
+	lens_radius = aperture / 2;
+	float theta = vfov * M_PI / 180.0;
+	//这里其实默认观察点到成像平面的距离是1，但显然不是，我们这里传入了距离focus_dist，所以后面在计算时要修正
+	float half_height = tan(theta / 2);
+	float half_width = aspect * half_height;
+
+	origin = lookfrom;
+	w = unit_vector(lookfrom - lookat);
+	u = unit_vector(cross(vup, w));
+	v = unit_vector(cross(w, u));
+	corner = origin - half_width * focus_dist * u - half_height * focus_dist * v - focus_dist * w;
+	hor = 2.0*half_width*u*focus_dist;
+	ver = 2.0*half_height*v*focus_dist;
+
+	time0 = t0;
+	time1 = t1;
+}
+
 camare::~camare()
 {
 }

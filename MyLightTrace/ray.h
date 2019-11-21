@@ -12,6 +12,7 @@ public:
 	ray(const vec3& a, const vec3& b);
 	ray(const vec3& a, const vec3& b, float ti = 0.0);
 	~ray();
+	float time() const;
 
 	vec3 origin() const;
 	vec3 direction() const;

@@ -9,7 +9,7 @@ ray::ray(const vec3& a,const vec3& b){
 	A = a;
 	B = b;
 }
-ray::ray(const vec3& a, const vec3& b, float ti = 0.0) {
+ray::ray(const vec3& a, const vec3& b, float ti) {
 	A = a;
 	B = b;
 	_time = ti;
@@ -17,6 +17,10 @@ ray::ray(const vec3& a, const vec3& b, float ti = 0.0) {
 
 ray::~ray()
 {
+}
+float ray::time()const
+{
+	return _time;
 }
 vec3 ray::origin() const { return A; }
 vec3 ray::direction() const { return B; }

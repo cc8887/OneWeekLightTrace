@@ -10,12 +10,7 @@ public:
 	~moving_sphere();
 
 	virtual bool hit(const ray& r, float tmin, float tmax, hit_record& rec)const;
-	vec3 center(float time)const
-	{
-
-		return center0 + (time - time0) / (time1 - time0)*(center1 - center0);
-
-	}
+	vec3 center(float time)const;
 	float time0, time1;
 	vec3 center0, center1;
 	float radius;

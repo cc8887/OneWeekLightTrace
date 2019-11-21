@@ -43,3 +43,10 @@ bool moving_sphere::hit(const ray& r, float tmin, float tmax, hit_record& rec)co
 	return false;
 }
 
+vec3 moving_sphere::center(float time)const
+{
+
+	return center0 + (time - time0) / (time1 - time0)*(center1 - center0);
+
+}
+
